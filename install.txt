@@ -1,0 +1,9 @@
+sudo apt install python3.8-dev
+
+Else you get:
+./psycopg/psycopg.h:35:10: fatal error: Python.h: No such file or directory
+
+
+In Procfile:
+web: gunicorn app.wsgi
+where app is the name of the project
