@@ -7,3 +7,15 @@ Else you get:
 In Procfile:
 web: gunicorn app.wsgi
 where app is the name of the project
+
+Creating a postgresql database:
+heroku addons:create heroku-postgresql:hobby-dev
+
+Now to see the setting:
+heroku config
+ ›   Warning: heroku update available from 7.42.4 to 7.42.5.
+=== cfltc Config Vars
+DATABASE_URL:                postgres://oudgqayawnfbap:5bcb8f3a673a19f83f57e6daf9c60295287f821a334e6a3f3fcdfb2513f9993a@ec2-35-173-94-156.compute-1.amazonaws.com:5432/d1t1tuucbpbqmm
+HEROKU_POSTGRESQL_OLIVE_URL: postgres://yrolthpfuprmwb:cd04ddcfbf66b15d6a79f7d7b44215133826f4eefc233bbf5aa8dd1d3a0e71f4@ec2-50-19-26-235.compute-1.amazonaws.com:5432/d6ru5uoo0np9np
+
+Update the url in app/settings.py
